@@ -1,5 +1,16 @@
+@font-face {
+  font-family: "Spartan";
+  src: url("./fonts/LeagueSpartan-Light.ttf");
+}
+
+@font-face {
+  font-family: "SpartanBold";
+  src: url("./fonts/LeagueSpartan-Bold.ttf");
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Spartan";
 }
 
 body {
@@ -19,26 +30,84 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
 
-  width: clamp(70vw, 90vw, 80vw);
-  height: clamp(30vw, 50vw, 40vw);
+  width: clamp(75vw, 95vw, 85vw);
+  height: clamp(35vw, 55vw, 45vw);
 
   background-color: darksalmon;
+}
+
+h1 {
+  font-family: "SpartanBold";
+  color: #5b3a59;
 }
 
 .row-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
+
+  width: 100%;
 }
 
 .row-2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+
+  width: 100%;
 }
 
-.row-1,
-.row-2 {
-  width: 200px;
-  height: 200px;
+.container-stars {
+  position: relative;
+  background-color: brown;
+}
+
+.star-1,
+.star-2,
+.star-3 {
+  position: absolute;
+
+  display: block;
+
+  width: clamp(26vw, 41vw, 31vw);
+  height: clamp(2vw, 6vw, 4vw);
+
+  border-radius: clamp(0.4rem, 0.8rem, 0.6rem);
+  background-color: #f7f2f8;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.star-1 {
+  top: calc(1rem + 0.5em);
+  left: calc(1rem + 0.5em);
+  right: calc(1rem + 0.5em);
+}
+
+.star-2 {
+  top: calc(6rem + 0.5em);
+  left: calc(4rem + 0.5em);
+  right: calc(4rem + 0.5em);
+}
+
+.star-3 {
+  top: calc(11rem + 0.5em);
+  left: calc(6.5rem + 0.5em);
+  right: calc(6.5rem + 0.5em);
+}
+
+.star {
+  width: clamp(4vw, 10vw, 7vw);
+  height: clamp(1vw, 3vw, 2vw);
+
+  background-image: url("./images/icon-star.svg");
+  font-size: 110%;
+  background-repeat: space;
+}
+
+.text-star {
+  color: #5b3a59;
+  font-family: "SpartanBold";
 }
