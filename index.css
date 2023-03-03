@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Spartan";
   src: url("./fonts/LeagueSpartan-Light.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SpartanBold";
   src: url("./fonts/LeagueSpartan-Bold.ttf");
+  font-display: swap;
 }
 
 * {
