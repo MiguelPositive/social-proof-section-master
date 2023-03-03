@@ -33,12 +33,27 @@ main {
   width: clamp(75vw, 95vw, 85vw);
   height: clamp(35vw, 55vw, 45vw);
 
-  background-color: darksalmon;
+  /* background-color: darksalmon; */
 }
 
 h1 {
   font-family: "SpartanBold";
   color: #5b3a59;
+
+  font-size: calc(2.2rem + 0.5rem);
+
+  width: 50%;
+}
+
+.text-we {
+  width: 70%;
+
+  font-weight: bold;
+  font-size: calc(0.6rem + 0.5em);
+
+  line-height: clamp(1.5vw, 2.5vw, 2vw);
+
+  color: gray;
 }
 
 .row-1 {
@@ -62,40 +77,22 @@ h1 {
   background-color: brown;
 }
 
-.star-1,
-.star-2,
-.star-3 {
-  position: absolute;
-
-  display: block;
-
-  width: clamp(26vw, 41vw, 31vw);
-  height: clamp(2vw, 6vw, 4vw);
-
-  border-radius: clamp(0.4rem, 0.8rem, 0.6rem);
-  background-color: #f7f2f8;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .star-1 {
-  top: calc(1rem + 0.5em);
-  left: calc(1rem + 0.5em);
-  right: calc(1rem + 0.5em);
+  top: clamp(2vw, 4vw, 3vw);
+  left: clamp(0.5vw, 2vw, 1vw);
+  right: clamp(0.5vw, 2vw, 1vw);
 }
 
 .star-2 {
-  top: calc(6rem + 0.5em);
-  left: calc(4rem + 0.5em);
-  right: calc(4rem + 0.5em);
+  top: clamp(7.5vw, 9.5vw, 8.5vw);
+  left: clamp(2.5vw, 4.5vw, 3.5vw);
+  right: clamp(2.5vw, 4.5vw, 3.5vw);
 }
 
 .star-3 {
-  top: calc(11rem + 0.5em);
-  left: calc(6.5rem + 0.5em);
-  right: calc(6.5rem + 0.5em);
+  top: clamp(12vw, 16vw, 14vw);
+  left: clamp(4.5vw, 8.5vw, 6.5vw);
+  right: clamp(4.5vw, 8.5vw, 6.5vw);
 }
 
 .star {
@@ -107,7 +104,71 @@ h1 {
   background-repeat: space;
 }
 
+.star-1,
+.star-2,
+.star-3 {
+  position: absolute;
+
+  display: block;
+
+  width: clamp(26vw, 41vw, 31vw);
+  height: clamp(1.5vw, 5.5vw, 3.5vw);
+
+  border-radius: clamp(0.4rem, 0.8rem, 0.6rem);
+  background-color: #f7f2f8;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .text-star {
   color: #5b3a59;
   font-family: "SpartanBold";
+}
+
+.row-2-column-1,
+.row-2-column-2,
+.row-2-column-3 {
+  position: relative;
+}
+
+.row-2-column-1 {
+  background-color: coral;
+}
+
+.row-2-column-2 {
+  background-color: rgb(61, 139, 119);
+}
+
+.row-2-column-3 {
+  background-color: gray;
+}
+
+.avatar-colton {
+  width: clamp(2vw, 4vw, 3vw);
+  height: clamp(2vw, 4vw, 3vw);
+
+  border-radius: 200%;
+
+  background-image: url("./images/image-colton.jpg");
+  background-size: cover;
+}
+
+.container-avatar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  background-color: #511f50;
+
+  width: 85%;
+  height: 85%;
+
+  border-radius: calc(0.4rem + 0.5em);
+  padding: clamp(1.5vw, 3.5vw, 2.5vw);
 }
