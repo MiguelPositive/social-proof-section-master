@@ -11,6 +11,8 @@
 * {
   box-sizing: border-box;
   font-family: "Spartan";
+
+  font-size: clamp(1.3vw, 1.5vw, 1.4vw);
 }
 
 body {
@@ -22,6 +24,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 
+  background-color: blue; */
+
+  /* background-image: url("./images/bg-pattern-bottom-desktop.svg");
+  background-size: 90%; */
+  /* background-position: left clamp(2vw, 6vw, 4vw); */
 }
 
 main {
@@ -40,16 +48,19 @@ h1 {
   font-family: "SpartanBold";
   color: #5b3a59;
 
-  font-size: calc(2.2rem + 0.5rem);
+  font-size: clamp(2.5vw, 3.5vw, 3vw);
 
   width: 50%;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 .text-we {
-  width: 70%;
+  width: 75%;
 
   font-weight: bold;
-  font-size: calc(0.6rem + 0.5em);
 
   line-height: clamp(1.5vw, 2.5vw, 2vw);
 
@@ -74,7 +85,7 @@ h1 {
 
 .container-stars {
   position: relative;
-  background-color: brown;
+  /* background-color: brown; */
 }
 
 .star-1 {
@@ -96,11 +107,11 @@ h1 {
 }
 
 .star {
-  width: clamp(4vw, 10vw, 7vw);
-  height: clamp(1vw, 3vw, 2vw);
+  width: clamp(7.5vw, 13.5vw, 9.5vw);
+  height: clamp(0.6vw, 2.6vw, 1.6vw);
 
   background-image: url("./images/icon-star.svg");
-  font-size: 110%;
+  background-size: contain;
   background-repeat: space;
 }
 
@@ -133,7 +144,7 @@ h1 {
   position: relative;
 }
 
-.row-2-column-1 {
+/* .row-2-column-1 {
   background-color: coral;
 }
 
@@ -143,32 +154,69 @@ h1 {
 
 .row-2-column-3 {
   background-color: gray;
-}
-
-.avatar-colton {
-  width: clamp(2vw, 4vw, 3vw);
-  height: clamp(2vw, 4vw, 3vw);
-
-  border-radius: 200%;
-
-  background-image: url("./images/image-colton.jpg");
-  background-size: cover;
-}
-
-.container-avatar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+} */
 
 .card-1,
 .card-2,
 .card-3 {
+  position: absolute;
+
   background-color: #511f50;
 
   width: 85%;
   height: 85%;
 
-  border-radius: calc(0.4rem + 0.5em);
+  border-radius: calc(0.1rem + 0.5em);
   padding: clamp(1.5vw, 3.5vw, 2.5vw);
+
+  color: white;
+}
+
+.image-avatar {
+  margin-right: clamp(1vw, 1.4vw, 1.2vw);
+
+  width: clamp(2vw, 4vw, 3vw);
+  height: clamp(2vw, 4vw, 3vw);
+
+  border-radius: 200%;
+  background-size: cover;
+}
+
+.avatar-colton {
+  background-image: url("./images/image-colton.jpg");
+}
+
+.avatar-irene {
+  background-image: url("./images/image-irene.jpg");
+}
+
+.avatar-anne {
+  background-image: url("./images/image-anne.jpg");
+}
+
+.container-avatar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.container-avatar p {
+  margin-top: 0;
+  color: #a9598e;
+  font-weight: bold;
+
+  margin-top: clamp(0.5vw, 0.7vw, 0.6vw);
+}
+
+.container-text p {
+  font-size: clamp(1.1vw, 1.3vw, 1.2vw);
+  line-height: clamp(1.3vw, 1.5vw, 1.4vw);
+}
+
+.card-2 {
+  top: clamp(1.2vw, 1.6vw, 1.4vw);
+}
+
+.card-3 {
+  top: clamp(2.6vw, 3vw, 2.8vw);
 }
